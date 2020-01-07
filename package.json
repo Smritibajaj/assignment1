@@ -9,8 +9,12 @@
     "@types/jest": "^24.0.24",
     "@types/node": "^12.12.22",
     "@types/react": "^16.9.17",
+    "@types/react-autocomplete": "^1.8.5",
     "@types/react-dom": "^16.9.4",
+    "axios": "^0.19.0",
     "react": "^16.12.0",
+    "react-app-polyfill": "^1.0.5",
+    "react-autocomplete": "^1.8.1",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
     "typescript": "^3.7.4"
@@ -24,6 +28,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "https://restcountries.eu/rest/v2",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -33,7 +38,8 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie 11"
     ]
   }
 }

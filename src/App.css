@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+body{
+  background-color: #e8eaf6 ;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+  font-family: sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.custom-select {
+  position: relative;
+  font-family: sans-serif;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  color:rgba(0, 0, 0, 0.87);
+}
+.header{
+  align-self: center;
+}
+.select-selected {
+  background-color: DodgerBlue;
 }
 
-.App-link {
-  color: #61dafb;
+.selectbox{
+  align-self: center;
+  width:300px;
+  height:30px;
+  font-weight: bold;
+  border: solid #1a237e
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.section{
+  display:flex;
+  justify-content: space-around;
+}
+
+div li{
+    border: solid #1a237e;
+    list-style: none;
+    padding: 8px;
+    border-bottom: none;
+    color: white;
+}
+
+li:last-child {
+  border-bottom: solid #1a237e;
+}
+div li:nth-child(n) {
+  background: #7986cb;
+}
+
+div li:nth-child(2n+0) {
+  background: #3949ab;
+}
+
+div li:nth-child(3n+0) {
+  background:#303f9f;
+}
+
+.section div{
+  color:rgba(0, 0, 0, 0.87);
 }
